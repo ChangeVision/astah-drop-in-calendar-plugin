@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+   <extension point="com.change_vision.astah.ui.actionSets">
+      <actionSet
+            label="%action_set_label"
+            visible="true"
+            id="com.change_vision.astah.login.actionSet">
+         <menu
+               id="login"
+               label="%menu_group"
+               path="tool/login">
+         </menu>
+         <action
+         label="%menu_label"
+               icon="icons/sample.gif"
+               class="com.change_vision.astah.login.TemplateAction"
+               tooltip="%menu_tooltip"
+               menubarPath="tool/login/"
+               id="login">
+         </action>
+     </actionSet>
+   </extension>
+</plugin>
