@@ -4,19 +4,14 @@
       <actionSet
             label="%action_set_label"
             visible="true"
-            id="com.change_vision.astah.login.actionSet">
-         <menu
-               id="login"
-               label="%menu_group"
-               path="tool/login">
-         </menu>
+            id="com.change_vision.astah.calendar_image.actionSet">
          <action
          label="%menu_label"
                icon="icons/sample.gif"
-               class="com.change_vision.astah.login.TemplateAction"
+               class="com.change_vision.astah.calendar.CalendarImageAction"
                tooltip="%menu_tooltip"
-               menubarPath="tool/login/"
-               id="login">
+               menubarPath="tool/export_image/"
+               id="calendar_image">
          </action>
      </actionSet>
    </extension>
