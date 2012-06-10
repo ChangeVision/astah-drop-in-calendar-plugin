@@ -1,7 +1,7 @@
 Stick Calendar plugin for Astah
 ===============================================
 
-![sample image](https://github.com/ChangeVision/astah-stick-calendar-image-pluginraw/master/doc/screenshots/calendar.png)
+![sample image](https://github.com/ChangeVision/astah-stick-calendar-image-plugin/raw/master/doc/screeenshots/calendar.png)
 
 Version
 ------------
