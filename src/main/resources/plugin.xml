@@ -10,7 +10,7 @@
                icon="icons/sample.gif"
                class="com.change_vision.astah.calendar.CalendarImageAction"
                tooltip="%menu_tooltip"
-               menubarPath="tool/export_image/"
+               menubarPath="tool/export_image"
                id="calendar_image">
          </action>
      </actionSet>
