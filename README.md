@@ -19,8 +19,8 @@ How to install
 ------------
 1. Deploy the jar file in the "plugins" folder under the Astah Install folder
 2. Start Astah
-3. You find that the [Stick Calendar] has been added under the [Tool] - [export image] menu
-
+3. You find that the [Stick Calendar] has been added under the [Tool] menu
+![menu image](https://github.com/ChangeVision/astah-stick-calendar-image-plugin/raw/master/doc/screeenshots/calendar_menu.png)
 
 License
 ------------
