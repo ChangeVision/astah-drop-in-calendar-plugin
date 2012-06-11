@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <properties>
     <bundle.symbolicName>com.change_vision.astah.calendar_image</bundle.symbolicName>
     <bundle.namespace>com.change_vision.astah</bundle.namespace>
@@ -184,101 +185,101 @@
           </execution>
         </executions>
         <!-- | the following instructions build a simple set of public/private
-          classes into an OSGi bundle -->
+        classes into an OSGi bundle -->
         <configuration>
-          <unpackBundle>true</unpackBundle>
           <instructions>
             <Bundle-SymbolicName>${bundle.symbolicName}; singleton:=true</Bundle-SymbolicName>
             <Bundle-Version>${project.version}</Bundle-Version>
             <!-- | assume public classes are in the top package, and private classes
-              are under ".internal" -->
+            are under ".internal" -->
             <Bundle-Activator>${bundle.namespace}.Activator</Bundle-Activator>
             <Astah-Version>${astah.version}</Astah-Version>
             <Astah-Edition>${astah.edition}</Astah-Edition>
             <!-- | each module can override these defaults in their osgi.bnd file -->
             <_include>-osgi.bnd</_include>
-            <Embed-Dependency>*;scope=compile|runtime;type=!pom</Embed-Dependency>
-            <Embed-Transitive>true</Embed-Transitive>
-          </instructions>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-release-plugin</artifactId>
-        <version>2.3.1</version>
-      </plugin>
-    </plugins>
+          <Embed-Dependency>*;scope=compile|runtime;type=!pom</Embed-Dependency>
+          <Embed-Transitive>true</Embed-Transitive>
+        </instructions>
+      </configuration>
+    </plugin>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-release-plugin</artifactId>
+      <version>2.3.1</version>
+    </plugin>
+  </plugins>
   <pluginManagement>
     <plugins>
-<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+      <!--This plugin's configuration is used to store Eclipse m2e settings
+      only. It has no influence on the Maven build itself. -->
       <plugin>
         <groupId>org.eclipse.m2e</groupId>
         <artifactId>lifecycle-mapping</artifactId>
         <version>1.0.0</version>
         <configuration>
           <lifecycleMappingMetadata>
-          <pluginExecutions>
-            <pluginExecution>
-            <pluginExecutionFilter>
-            <groupId>org.apache.felix</groupId>
-            <artifactId>maven-bundle-plugin</artifactId>
-            <versionRange>[2.3.0,)</versionRange>
-            <goals>
-                <goal>bundle</goal>
-            </goals>
-            </pluginExecutionFilter>
-            <action>
-                <ignore></ignore>
-            </action>
-            </pluginExecution>
-          </pluginExecutions>
+            <pluginExecutions>
+              <pluginExecution>
+                <pluginExecutionFilter>
+                  <groupId>org.apache.felix</groupId>
+                  <artifactId>maven-bundle-plugin</artifactId>
+                  <versionRange>[2.3.0,)</versionRange>
+                  <goals>
+                    <goal>manifest</goal>
+                  </goals>
+                </pluginExecutionFilter>
+                <action>
+                  <ignore></ignore>
+                </action>
+              </pluginExecution>
+            </pluginExecutions>
           </lifecycleMappingMetadata>
         </configuration>
-     </plugin>
-  </plugins>
+      </plugin>
+    </plugins>
   </pluginManagement>
-  </build>
-  <dependencies>
-    <dependency>
-      <groupId>com.change_vision.astah</groupId>
-      <artifactId>astah-api</artifactId>
-      <version>${astah.version}</version>
-      <scope>system</scope>
-      <systemPath>${astahPath}/astah-api.jar</systemPath>
-    </dependency>
-    <dependency>
-      <groupId>org.osgi</groupId>
-      <artifactId>org.osgi.core</artifactId>
-      <version>4.2.0</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.osgi</groupId>
-      <artifactId>org.osgi.compendium</artifactId>
-      <version>4.2.0</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.10</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.codehaus.groovy</groupId>
-      <artifactId>groovy-all</artifactId>
-      <version>${groovy.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.swinglabs</groupId>
-      <artifactId>swingx</artifactId>
-      <version>1.6.1</version>
-    </dependency>
-  </dependencies>
-  <scm>
-    <url>scm:git:git@github.com:ChangeVision/astah-stick-calendar-image-plugin.git</url>
-    <connection>scm:git:git@github.com:ChangeVision/astah-stick-calendar-image-plugin.git</connection>
-    <developerConnection>scm:git:git@github.com:ChangeVision/astah-stick-calendar-image-plugin.git</developerConnection>
-    <tag>HEAD</tag>
-  </scm>
+</build>
+<dependencies>
+  <dependency>
+    <groupId>com.change_vision.astah</groupId>
+    <artifactId>astah-api</artifactId>
+    <version>${astah.version}</version>
+    <scope>system</scope>
+    <systemPath>${astahPath}/astah-api.jar</systemPath>
+  </dependency>
+  <dependency>
+    <groupId>org.osgi</groupId>
+    <artifactId>org.osgi.core</artifactId>
+    <version>4.2.0</version>
+    <scope>provided</scope>
+  </dependency>
+  <dependency>
+    <groupId>org.osgi</groupId>
+    <artifactId>org.osgi.compendium</artifactId>
+    <version>4.2.0</version>
+    <scope>provided</scope>
+  </dependency>
+  <dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.10</version>
+    <scope>test</scope>
+  </dependency>
+  <dependency>
+    <groupId>org.codehaus.groovy</groupId>
+    <artifactId>groovy-all</artifactId>
+    <version>${groovy.version}</version>
+  </dependency>
+  <dependency>
+    <groupId>org.swinglabs</groupId>
+    <artifactId>swingx</artifactId>
+    <version>1.6.1</version>
+  </dependency>
+</dependencies>
+<scm>
+  <url>scm:git:git@github.com:ChangeVision/astah-stick-calendar-image-plugin.git</url>
+  <connection>scm:git:git@github.com:ChangeVision/astah-stick-calendar-image-plugin.git</connection>
+  <developerConnection>scm:git:git@github.com:ChangeVision/astah-stick-calendar-image-plugin.git</developerConnection>
+  <tag>HEAD</tag>
+</scm>
 </project>
