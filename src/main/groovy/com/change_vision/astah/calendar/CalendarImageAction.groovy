@@ -3,7 +3,6 @@ package com.change_vision.astah.calendar;
 import java.awt.BorderLayout
 import java.awt.Color
 import java.awt.Graphics2D
-import java.awt.MouseInfo
 import java.awt.Point
 import java.awt.RenderingHints
 import java.awt.event.ActionEvent
@@ -130,8 +129,7 @@ class CalendarImageAction implements IPluginActionDelegate {
 
     def tm = accessor.transactionManager
     tm.beginTransaction()
-    def ml = MouseInfo.getPointerInfo().getLocation()
-    mmEditor.createImage(image,new Point((int)(dvm.toWorldCoordX((int)ml.x)),(int)(dvm.toWorldCoordY((int)ml.y))))
+    mmEditor.createImage(image,new Point(300,300))
     tm.endTransaction()
   }
 
