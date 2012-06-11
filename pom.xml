@@ -12,7 +12,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.change_vision.astah</groupId>
   <artifactId>calendar</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>%bundle.name</name>
   <description>%bundle.description</description>
@@ -302,6 +302,6 @@
   	<url>scm:git:git@github.com:ChangeVision/astah-stick-calendar-image-plugin.git</url>
   	<connection>scm:git:git@github.com:ChangeVision/astah-stick-calendar-image-plugin.git</connection>
   	<developerConnection>scm:git:git@github.com:ChangeVision/astah-stick-calendar-image-plugin.git</developerConnection>
-    <tag>calendar-1.0.1</tag>
+    <tag>HEAD</tag>
   </scm>
 </project>
