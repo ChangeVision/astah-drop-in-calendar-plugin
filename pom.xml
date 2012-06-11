@@ -221,6 +221,11 @@
           </instructions>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.3.1</version>
+      </plugin>
     </plugins>
     <pluginManagement>
       <plugins>
@@ -294,4 +299,9 @@
       <version>1.6.1</version>
     </dependency>
   </dependencies>
+  <scm>
+  	<url>scm:git:git@github.com:ChangeVision/astah-stick-calendar-image-plugin.git</url>
+  	<connection>scm:git:git@github.com:ChangeVision/astah-stick-calendar-image-plugin.git</connection>
+  	<developerConnection>scm:git:git@github.com:ChangeVision/astah-stick-calendar-image-plugin.git</developerConnection>
+  </scm>
 </project>
