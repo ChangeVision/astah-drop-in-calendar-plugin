@@ -1,4 +1,4 @@
-Stick Calendar plugin for Astah
+Drop in Calendar plugin for Astah
 ===============================================
 
 ![sample image](https://github.com/ChangeVision/astah-stick-calendar-image-plugin/raw/master/doc/screeenshots/calendar.png)
@@ -13,7 +13,7 @@ Astah UML, Astah Professional 6.5.x or later
 
 Description
 ------------
-This Plugin enables you to stick calendar into Astah diagrams.
+This Plugin enables you to Drops a Calendar instantly into a diagram when you need it - Great when taking a minutes in a meeting or making plans using Mind Map.
 
 How to install
 ------------
