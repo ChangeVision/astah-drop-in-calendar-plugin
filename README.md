@@ -20,7 +20,7 @@ How to install
 ------------
 1. Deploy the jar file in the "plugins" folder under the Astah Install folder
 2. Start Astah
-3. You find that the [Stick Calendar] has been added under the [Tool] menu
+3. You find that the [Drop in Calendar] has been added under the [Tool] menu
 
 ![menu image](https://github.com/ChangeVision/astah-drop-in-calendar-plugin/raw/master/doc/screeenshots/calendar_menu.png)
 
