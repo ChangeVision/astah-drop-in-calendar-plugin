@@ -23,7 +23,6 @@ How to install
 3. You find that the [Stick Calendar] has been added under the [Tool] menu
 
 ![menu image](https://github.com/ChangeVision/astah-drop-in-calendar-plugin/raw/master/doc/screeenshots/calendar_menu.png)
-![menu image_ja](https://github.com/ChangeVision/astah-drop-in-calendar-plugin/raw/master/doc/screeenshots/calendar_menu_ja.png)
 
 License
 ------------
