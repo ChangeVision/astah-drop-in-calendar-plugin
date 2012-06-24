@@ -2,10 +2,11 @@ Drop in Calendar plugin for Astah
 ===============================================
 
 ![sample image](https://github.com/ChangeVision/astah-stick-calendar-image-plugin/raw/master/doc/screeenshots/calendar.png)
+![sample image_ja](https://github.com/ChangeVision/astah-stick-calendar-image-plugin/raw/master/doc/screeenshots/calendar_ja.png)
 
 Version
 ------------
-1.0.0
+1.0.2
 
 Available for
 ------------
@@ -22,6 +23,7 @@ How to install
 3. You find that the [Stick Calendar] has been added under the [Tool] menu
 
 ![menu image](https://github.com/ChangeVision/astah-stick-calendar-image-plugin/raw/master/doc/screeenshots/calendar_menu.png)
+![menu image_ja](https://github.com/ChangeVision/astah-stick-calendar-image-plugin/raw/master/doc/screeenshots/calendar_menu_ja.png)
 
 License
 ------------
