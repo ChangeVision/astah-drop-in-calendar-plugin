@@ -39,6 +39,7 @@ class CalendarImageAction implements IPluginActionDelegate {
   def JDialog frame
   def JXMonthView monthView
   def Action action
+  def JCheckBox holidayCheck
 
   def run(IWindow window){
     frame = new JDialog(window.getParent(),Messages.getString("CalendarImageAction.title")); //$NON-NLS-1$
@@ -67,14 +68,14 @@ class CalendarImageAction implements IPluginActionDelegate {
     def footer = new JPanel()
     footer.setLayout(new BoxLayout(footer,BoxLayout.X_AXIS))
     def commitButton = createCommitButton()
-    def holidayCheck = createShowJapaneseHolidayCheckBox()
+    createShowJapaneseHolidayCheckBox()
     footer.add(holidayCheck)
     footer.add(commitButton)
     return footer
   }
 
-  private JCheckBox createShowJapaneseHolidayCheckBox() {
-    def holidayCheck = new JCheckBox(Messages.getString("CalendarImageAction.show_javanese_holiday_title"),true) //$NON-NLS-1$
+  private createShowJapaneseHolidayCheckBox() {
+    holidayCheck = new JCheckBox(Messages.getString("CalendarImageAction.show_javanese_holiday_title"),true) //$NON-NLS-1$
     holidayCheck.addChangeListener({
       ChangeEvent event ->
       Object obj = event.getSource()
@@ -87,7 +88,6 @@ class CalendarImageAction implements IPluginActionDelegate {
         }
       }
     } as ChangeListener)
-    return holidayCheck
   }
 
   private JButton createCommitButton() {
@@ -109,7 +109,6 @@ class CalendarImageAction implements IPluginActionDelegate {
 
     }
     action.putValue(Action.NAME,Messages.getString("CalendarImageAction.commit_action")) //$NON-NLS-1$
-    action.enabled = false
     commitButton.setAction(action)
     return commitButton
   }
@@ -138,14 +137,13 @@ class CalendarImageAction implements IPluginActionDelegate {
     monthView = new JXMonthView()
     monthView.setTraversable(true)
     monthView.setPreferredColumnCount(2)
-    monthView.addActionListener({ActionEvent event ->
-      action.enabled = true
-    } as ActionListener
-    )
     monthView.addPropertyChangeListener("firstDisplayedDay", { //$NON-NLS-1$
       PropertyChangeEvent event ->
       def newDate = event.getNewValue()
-      setHolidays(newDate)
+      if (holidayCheck.isSelected()) {
+        setHolidays(newDate)
+      }
+      frame.pack()
     } as PropertyChangeListener)
     setHolidays(monthView.getFirstDisplayedDay())
     monthView.setDayForeground(Calendar.SUNDAY,Color.RED)
@@ -155,8 +153,16 @@ class CalendarImageAction implements IPluginActionDelegate {
   private setHolidays(Date newDate) {
     def Calendar cal = Calendar.getInstance()
     cal.setTime(newDate)
-    def Date[] currentHolidays = Holiday.listHoliDayDates(cal.get(Calendar.YEAR),cal.get(Calendar.MONTH))
-    def Date[] nextHolidays = Holiday.listHoliDayDates(cal.get(Calendar.YEAR),cal.get(Calendar.MONTH) + 1)
+    def year = cal.get(Calendar.YEAR)
+    def month = cal.get(Calendar.MONTH)
+    def nextYear = year
+    def nextMonth = month + 1
+    if (month == Calendar.DECEMBER){
+      nextYear = year + 1
+      nextMonth = Calendar.JANUARY
+    }
+    def Date[] currentHolidays = Holiday.listHoliDayDates(year,month)
+    def Date[] nextHolidays = Holiday.listHoliDayDates(nextYear,nextMonth)
     // listHolidayDates returns null when there is no japanese holidays
     monthView.setFlaggedDates(currentHolidays)
     monthView.addFlaggedDates(nextHolidays)
