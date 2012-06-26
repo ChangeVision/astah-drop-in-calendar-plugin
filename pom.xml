@@ -308,9 +308,9 @@
   </dependency>
 </dependencies>
 <scm>
-  <url>scm:git:git@github.com:ChangeVision/astah-stick-calendar-image-plugin.git</url>
-  <connection>scm:git:git@github.com:ChangeVision/astah-stick-calendar-image-plugin.git</connection>
-  <developerConnection>scm:git:git@github.com:ChangeVision/astah-stick-calendar-image-plugin.git</developerConnection>
+  <url>scm:git:git@github.com:ChangeVision/astah-drop-in-calendar-plugin.git</url>
+  <connection>scm:git:git@github.com:ChangeVision/astah-drop-in-calendar-plugin.git</connection>
+  <developerConnection>scm:git:git@github.com:ChangeVision/astah-drop-in-calendar-plugin.git</developerConnection>
   <tag>HEAD</tag>
 </scm>
 </project>
