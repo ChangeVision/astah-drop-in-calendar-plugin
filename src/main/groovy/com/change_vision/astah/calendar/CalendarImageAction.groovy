@@ -95,11 +95,9 @@ class CalendarImageAction implements IPluginActionDelegate {
     action = new AbstractAction(){
       public void actionPerformed(ActionEvent event) {
         monthView.setTraversable(false)
-        def ps = monthView.getPreferredSize()
+        def ps = monthView.getSize()
         def image = new BufferedImage((int)ps.width, (int)ps.height, BufferedImage.TYPE_INT_ARGB)
-        def g2 = (Graphics2D)image.getGraphics()
-        g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION,
-              RenderingHints.VALUE_INTERPOLATION_BILINEAR)
+        def g2 = (Graphics2D)image.createGraphics()
         monthView.paint(g2)
         g2.dispose()
 
