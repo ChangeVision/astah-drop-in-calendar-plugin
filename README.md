@@ -18,6 +18,7 @@ This Plugin enables you to Drops a Calendar instantly into a diagram when you ne
 
 How to install
 ------------
+0. [Download the jar file.](https://github.com/ChangeVision/astah-drop-in-calendar-plugin/downloads)
 1. Deploy the jar file in the "plugins" folder under the Astah Install folder
 2. Start Astah
 3. You find that the [Drop in Calendar] has been added under the [Tool] menu
