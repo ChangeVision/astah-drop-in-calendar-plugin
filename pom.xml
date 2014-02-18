@@ -198,7 +198,7 @@
             <id>build-bundle</id>
             <phase>compile</phase>
             <goals>
-              <goal>manifest</goal>
+              <goal>bundle</goal>
             </goals>
           </execution>
         </executions>
